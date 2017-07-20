@@ -8,7 +8,17 @@ wheelzoom(document.querySelectorAll('img'));
 // or
 wheelzoom(document.querySelectorAll('img'), {zoom:0.05});
 // zoom sets the zoom percent.
+var options = {
+    zoom:0.05,        
+    zoomInBtn:".glyphicon-plus",
+    zoomOutBtn:".glyphicon-minus",
+    originScaleBtn:".glyphicon-fullscreen"
+}
+
+wheelzoom(document.querySelectorAll('img'));
+// add tools if need. add tools classname here, TIPS: .class-name
 ````
+tools example:[Click Here]() 
 
 ## License
 [MIT License](http://opensource.org/licenses/MIT)
@@ -17,6 +27,8 @@ wheelzoom(document.querySelectorAll('img'), {zoom:0.05});
 Chrome, Safari, Opera, FireFox 17+, IE9+.
 
 ## Changelog:
+##### feature - 2017/07/20
+* Added tools in setting options and default setting.
 
 ##### v.3.1.2 - 2017/04/20
 * Added package.json & added to NPM.

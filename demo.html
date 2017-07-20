@@ -3,9 +3,80 @@
 <head>
 	<meta charset="utf-8">
 	<title>Wheelzoom</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		body{
+			height:100vh;
+			width: 100vw;
+		}
+		.tools{
+			position: fixed;
+			left:20px;
+			bottom:30px;
+			z-index: 101;
+			text-align: center;
+			font-size: 22px;
+			line-height: 30px;
+			width: 30px;
+			height: 90px;
+			color:#545454;
+			display: block;
+			background-color: white;
+			border: 1px #979797 inset;
+			box-shadow: 1px 1px 1px 0 #545454;
+		}
+		.img-div{
+			width: 50%;
+			height: 100%;
+			float: left;
+		}
+		.zoom{
+			max-height: 99%;
+			max-width: 99%;
+			height: auto;
+
+		}
+		.presentation{
+			float: right;
+			text-align: left;
+			width: 40%;
+		}
+	</style>
 </head>
 <body>
-	<img class='zoom' src='daisy.jpg' alt='Daisy!' width='555' height='320'/>
+	<div class="tools">
+		<span class="glyphicon glyphicon-plus"></span>
+		<span class="glyphicon glyphicon-minus"></span>
+		<span class="glyphicon glyphicon-fullscreen"></span>
+
+	</div>
+	<img class='zoom' src='map.jpg' alt='Shanghai map' />
+
+	<div class="presentation">
+		<h1>Weibo Point Data:</h1>
+		<h3>Multi-scale Analysis and Mapping</h3>
+		<article>
+			<p>
+				In city center especially, Galleries and Exhibitions events location are the most significance factors of weibo sending location.
+			</p>
+			<p>
+				In suburban area, each district centers are the hot spot of weibo events. Especially, where there are universities.
+			</p>
+			<p>
+				But totally, we can easily come up with if there is WIFI, people can send weibo everywhere. :)
+			</p>
+			<p>
+				It’s also uploaded into ArcGIS online for people to look through hotspots.
+				<a href="http://github.artmap.website/">http://github.artmap.website/</a>
+			</p>
+		</article>
+	</div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="wheelzoom.js"></script>
 	<script>
 		wheelzoom(document.querySelector('img.zoom'));
